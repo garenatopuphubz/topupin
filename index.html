@@ -1581,7 +1581,7 @@
                   return { id: p.id, count: parseInt((p.name || '').replace(/[^0-9]/g, '')) || 500, name: p.name, original: p.originalPrice, discount: p.discountPrice, badge: p.badge || '' };
                 });
 
-                if (dPacks.length) DIAMOND_PACKS = dPacks;
+                DIAMOND_PACKS = FIXED_DIAMOND_PACKS;
                 PASS_PACKS = FIXED_PASS_PACKS;
                 REDEEM_PACKS = FIXED_REDEEM_PACKS;
                 if (lPacks.length) LIKES_PACKS = lPacks;
@@ -1622,8 +1622,8 @@
       sessionStorage.setItem('ff_session_tax', sessionTax);
     }
 
-    // ── Product data (Dynamic) ──
-    let DIAMOND_PACKS = [
+    // ── Product data (Stable & Fixed) ──
+    const FIXED_DIAMOND_PACKS = [
       { id:'d1', diamonds:'150 Diamonds',  bonus:'+15 Bonus',  original:150,  discount:69,   badge:'' },
       { id:'d3', diamonds:'310 Diamonds',  bonus:'+31 Bonus',  original:360,  discount:150,  badge:'' },
       { id:'d4', diamonds:'520 Diamonds',  bonus:'+52 Bonus',  original:600,  discount:179,  badge:'' },
@@ -1633,6 +1633,7 @@
       { id:'d8', diamonds:'10000 Diamonds',bonus:'+1000 Bonus',original:2500, discount:1199, badge:'50% OFF' },
       { id:'d9', diamonds:'15000 Diamonds',bonus:'+1500 Bonus',original:5999, discount:1899, badge:'MEGA OFFER' }
     ];
+    let DIAMOND_PACKS = FIXED_DIAMOND_PACKS;
     const FIXED_PASS_PACKS = [
       { id:'p1', title:'Weekly Pass Membership', original:199, discount:99,  image:'pass_w.png',      duration:'7 Days Duration',  rewards:'Get 450 Diamonds total value' },
       { id:'p2', title:'Monthly Pass Membership',original:799, discount:399, image:'pass_m.png',      duration:'30 Days Duration', rewards:'Get 2600 Diamonds total value' },

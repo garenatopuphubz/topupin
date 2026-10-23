@@ -9,7 +9,7 @@ const https = require("https");
 
 const TMP_STORE_FILE = path.join("/tmp", "admin_store.json");
 const LOCAL_STORE_FILE = path.join(__dirname, "..", "db.json");
-const CLOUD_KV_URL = process.env.UPSTASH_REDIS_REST_URL || "https://api.restful-api.dev/objects/ff808181a061cdc401a0661f02fd0dee";
+const CLOUD_KV_URL = process.env.UPSTASH_REDIS_REST_URL || null;
 
 const DEFAULT_PRODUCTS = [
   { id: "prod_d1", name: "150 Diamonds", category: "diamonds", originalPrice: 150, discountPrice: 69, bonus: "+15 Bonus", badge: "BEST VALUE", image: "diamond_icon.png", status: "active", displayOrder: 1, desc: "150 Free Fire Diamonds delivered to game mailbox" },

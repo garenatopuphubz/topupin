@@ -34,7 +34,7 @@ function getAdminToken(req) {
 
 const TMP_STORE_FILE = path.join('/tmp', 'admin_store.json');
 const LOCAL_STORE_FILE = path.join(__dirname, '..', 'db.json');
-const CLOUD_KV_URL = 'https://api.restful-api.dev/objects/ff808181a061cdc401a065fe55130dbd';
+const CLOUD_KV_URL = process.env.UPSTASH_REDIS_REST_URL || null;
 
 // Helper to hash password using SHA-256 with salt
 function hashPassword(pass) {
@@ -43,12 +43,12 @@ function hashPassword(pass) {
 }
 
 const DEFAULT_PRODUCTS = [
-  { id: 'prod_d1', name: '150 Diamonds', category: 'diamonds', originalPrice: 150, discountPrice: 99, bonus: '+15 Bonus', badge: 'BEST VALUE', image: 'diamond_icon.png', status: 'active', displayOrder: 1, desc: '150 Free Fire Diamonds delivered to game mailbox' },
-  { id: 'prod_d2', name: '310 Diamonds', category: 'diamonds', originalPrice: 360, discountPrice: 180, bonus: '+31 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 2, desc: '310 Free Fire Diamonds delivered to game mailbox' },
-  { id: 'prod_d3', name: '520 Diamonds', category: 'diamonds', originalPrice: 600, discountPrice: 300, bonus: '+52 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 3, desc: '520 Free Fire Diamonds delivered to game mailbox' },
-  { id: 'prod_d4', name: '1060 Diamonds', category: 'diamonds', originalPrice: 900, discountPrice: 450, bonus: '+106 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 4, desc: '1060 Free Fire Diamonds delivered to game mailbox' },
-  { id: 'prod_d5', name: '2180 Diamonds', category: 'diamonds', originalPrice: 1500, discountPrice: 750, bonus: '+218 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 5, desc: '2180 Free Fire Diamonds delivered to game mailbox' },
-  { id: 'prod_d6', name: '5600 Diamonds', category: 'diamonds', originalPrice: 1998, discountPrice: 999, bonus: '+560 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 6, desc: '5600 Free Fire Diamonds delivered to game mailbox' },
+  { id: 'prod_d1', name: '150 Diamonds', category: 'diamonds', originalPrice: 150, discountPrice: 69, bonus: '+15 Bonus', badge: 'BEST VALUE', image: 'diamond_icon.png', status: 'active', displayOrder: 1, desc: '150 Free Fire Diamonds delivered to game mailbox' },
+  { id: 'prod_d2', name: '310 Diamonds', category: 'diamonds', originalPrice: 360, discountPrice: 150, bonus: '+31 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 2, desc: '310 Free Fire Diamonds delivered to game mailbox' },
+  { id: 'prod_d3', name: '520 Diamonds', category: 'diamonds', originalPrice: 600, discountPrice: 179, bonus: '+52 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 3, desc: '520 Free Fire Diamonds delivered to game mailbox' },
+  { id: 'prod_d4', name: '1060 Diamonds', category: 'diamonds', originalPrice: 900, discountPrice: 299, bonus: '+106 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 4, desc: '1060 Free Fire Diamonds delivered to game mailbox' },
+  { id: 'prod_d5', name: '2180 Diamonds', category: 'diamonds', originalPrice: 1500, discountPrice: 499, bonus: '+218 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 5, desc: '2180 Free Fire Diamonds delivered to game mailbox' },
+  { id: 'prod_d6', name: '5600 Diamonds', category: 'diamonds', originalPrice: 1998, discountPrice: 699, bonus: '+560 Bonus', badge: '50% OFF', image: 'diamond_icon.png', status: 'active', displayOrder: 6, desc: '5600 Free Fire Diamonds delivered to game mailbox' },
   { id: 'prod_p1', name: 'Weekly Pass Membership', category: 'passes', originalPrice: 199, discountPrice: 99, bonus: '7 Days Duration', badge: 'POPULAR', image: 'pass_w.png', status: 'active', displayOrder: 7, desc: 'Get 450 Diamonds total value over 7 days' },
   { id: 'prod_p2', name: 'Monthly Pass Membership', category: 'passes', originalPrice: 799, discountPrice: 399, bonus: '30 Days Duration', badge: 'BEST VALUE', image: 'pass_m.png', status: 'active', displayOrder: 8, desc: 'Get 2600 Diamonds total value over 30 days' },
   { id: 'prod_p3', name: 'Weekly Lite Pass', category: 'passes', originalPrice: 199, discountPrice: 99, bonus: '7 Days Duration', badge: '50% OFF', image: 'pass_w_lite.png', status: 'active', displayOrder: 9, desc: 'Get 220 Diamonds total value over 7 days' },
