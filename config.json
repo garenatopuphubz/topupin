@@ -13,8 +13,8 @@
   "admin_password": "SEHRAB8082263818",
   "default_product": {
     "original_price": 150,
-    "discount_price": 99,
-    "discount_percent": 34,
+    "discount_price": 79,
+    "discount_percent": 47,
     "diamonds": 150,
     "image": "diamond_icon.png"
   }

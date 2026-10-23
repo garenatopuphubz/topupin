@@ -780,7 +780,7 @@
           </div>
           <div class="dash-player-meta">
             <div class="dash-player-name-row">
-              <span class="dash-player-name" id="verifiedPlayerName">KEVAL'FF</span>
+              <span class="dash-player-name" id="verifiedPlayerName">Player</span>
               <span class="dash-verified-pill">Verified</span>
             </div>
             <div class="dash-player-sub font-mono" id="verifiedUidDisplay">UID: —</div>
@@ -1242,14 +1242,14 @@
             <select id="supportPackageSelect" onchange="onSupportPackageChange()" style="width:100%;border:1.5px solid #cbd5e1;border-radius:10px;padding:9px 12px;font-size:12px;color:#0f172a;outline:none;font-family:inherit;background:#fff;cursor:pointer;">
               <option value="">-- Choose Purchased Package --</option>
               <optgroup label="💎 Diamond Top-Up Packs">
-                <option value="100 Diamonds (₹65)">100 Diamonds (₹65)</option>
-                <option value="310 Diamonds (₹180)">310 Diamonds (₹180)</option>
-                <option value="520 Diamonds (₹300)">520 Diamonds (₹300)</option>
-                <option value="1060 Diamonds (₹450)">1060 Diamonds (₹450)</option>
-                <option value="2180 Diamonds (₹750)">2180 Diamonds (₹750)</option>
-                <option value="5600 Diamonds (₹999)">5600 Diamonds (₹999)</option>
-                <option value="10000 Diamonds (₹1999)">10000 Diamonds (₹1999)</option>
-                <option value="15000 Diamonds (₹2999)">15000 Diamonds (₹2999)</option>
+                <option value="150 Diamonds (₹79)">150 Diamonds (₹79)</option>
+                <option value="310 Diamonds (₹149)">310 Diamonds (₹149)</option>
+                <option value="520 Diamonds (₹249)">520 Diamonds (₹249)</option>
+                <option value="1060 Diamonds (₹380)">1060 Diamonds (₹380)</option>
+                <option value="2180 Diamonds (₹649)">2180 Diamonds (₹649)</option>
+                <option value="5600 Diamonds (₹849)">5600 Diamonds (₹849)</option>
+                <option value="10000 Diamonds (₹1450)">10000 Diamonds (₹1450)</option>
+                <option value="15000 Diamonds (₹2499)">15000 Diamonds (₹2499)</option>
               </optgroup>
               <optgroup label="🎫 Memberships & Passes">
                 <option value="Weekly Pass Membership (₹100)">Weekly Pass Membership (₹100)</option>
@@ -1299,7 +1299,7 @@
           <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:12px 14px;margin-bottom:14px;text-align:left;">
             <div style="display:flex;justify-content:space-between;padding-bottom:6px;border-b:1px solid #e2e8f0;margin-bottom:6px;">
               <span style="color:#64748b;font-size:10.5px;font-weight:600;">Account Name:</span>
-              <strong id="confirmSupportName" style="color:#0f172a;font-size:11px;">KEVAL'FF</strong>
+              <strong id="confirmSupportName" style="color:#0f172a;font-size:11px;">—</strong>
             </div>
             <div style="display:flex;justify-content:space-between;padding-bottom:6px;border-b:1px solid #e2e8f0;margin-bottom:6px;">
               <span style="color:#64748b;font-size:10.5px;font-weight:600;">Free Fire UID:</span>
@@ -1313,7 +1313,7 @@
 
           <div style="background:#fff7ed;border:1px solid #ffedd5;border-radius:10px;padding:10px;margin-bottom:16px;text-align:left;">
             <p style="color:#c2410c;font-size:10.5px;font-weight:700;margin:0;line-height:1.5;">
-              ⚠️ Your order resolution & missing diamonds will be processed for account: <strong id="confirmSupportNoticeAccount">KEVAL'FF</strong>.
+              ⚠️ Your order resolution & missing diamonds will be processed for account: <strong id="confirmSupportNoticeAccount">—</strong>.
             </p>
           </div>
 
@@ -1624,14 +1624,14 @@
 
     // ── Product data (Dynamic) ──
     let DIAMOND_PACKS = [
-      { id:'d1', diamonds:'150 Diamonds',  bonus:'+15 Bonus',  original:150,  discount:99,   badge:'' },
-      { id:'d3', diamonds:'310 Diamonds',  bonus:'+31 Bonus',  original:360,  discount:180,  badge:'' },
-      { id:'d4', diamonds:'520 Diamonds',  bonus:'+52 Bonus',  original:600,  discount:300,  badge:'' },
-      { id:'d5', diamonds:'1060 Diamonds', bonus:'+106 Bonus', original:900,  discount:450,  badge:'' },
-      { id:'d6', diamonds:'2180 Diamonds', bonus:'+218 Bonus', original:1500, discount:750,  badge:'' },
-      { id:'d7', diamonds:'5600 Diamonds', bonus:'+560 Bonus', original:1998, discount:999,  badge:'' },
-      { id:'d8', diamonds:'10000 Diamonds',bonus:'+1000 Bonus',original:2500, discount:1700, badge:'50% OFF' },
-      { id:'d9', diamonds:'15000 Diamonds',bonus:'+1500 Bonus',original:5999, discount:2999, badge:'MEGA OFFER' }
+      { id:'d1', diamonds:'150 Diamonds',  bonus:'+15 Bonus',  original:150,  discount:79,   badge:'' },
+      { id:'d3', diamonds:'310 Diamonds',  bonus:'+31 Bonus',  original:360,  discount:149,  badge:'' },
+      { id:'d4', diamonds:'520 Diamonds',  bonus:'+52 Bonus',  original:600,  discount:249,  badge:'' },
+      { id:'d5', diamonds:'1060 Diamonds', bonus:'+106 Bonus', original:900,  discount:380,  badge:'' },
+      { id:'d6', diamonds:'2180 Diamonds', bonus:'+218 Bonus', original:1500, discount:649,  badge:'' },
+      { id:'d7', diamonds:'5600 Diamonds', bonus:'+560 Bonus', original:1998, discount:849,  badge:'' },
+      { id:'d8', diamonds:'10000 Diamonds',bonus:'+1000 Bonus',original:2500, discount:1450, badge:'50% OFF' },
+      { id:'d9', diamonds:'15000 Diamonds',bonus:'+1500 Bonus',original:5999, discount:2499, badge:'MEGA OFFER' }
     ];
     const FIXED_PASS_PACKS = [
       { id:'p1', title:'Weekly Pass Membership', original:199, discount:99,  image:'pass_w.png',      duration:'7 Days Duration',  rewards:'Get 450 Diamonds total value' },

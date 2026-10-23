@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Master Admin Control Panel</title>
+  <title>Free Fire Top Up — Admin Panel</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <script>
@@ -82,7 +82,7 @@
             A
           </div>
           <div>
-            <h1 class="font-black text-sm text-white tracking-wider uppercase">ADMIN PANEL</h1>
+            <h1 class="font-black text-sm text-white tracking-wider uppercase">FREE FIRE ADMIN</h1>
             <span class="inline-flex items-center gap-1 text-[10px] text-emerald-400 font-semibold">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Live Sync
@@ -508,6 +508,8 @@
   </div>
 
   <script>
+    // API Backend — always points to Vercel backend
+    const API_BASE = 'https://teamtopup.vercel.app';
     let globalStore = {};
     let activeCategory = 'all';
     let autoRefreshTimer = null;
