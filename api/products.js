@@ -12,8 +12,8 @@ const LOCAL_STORE_FILE = path.join(__dirname, "..", "db.json");
 const CLOUD_KV_URL = process.env.UPSTASH_REDIS_REST_URL || "https://api.restful-api.dev/objects/ff808181a061cdc401a0661f02fd0dee";
 
 const DEFAULT_PRODUCTS = [
-  { id: "prod_d1", name: "150 Diamonds", category: "diamonds", originalPrice: 150, discountPrice: 49, bonus: "+15 Bonus", badge: "BEST VALUE", image: "diamond_icon.png", status: "active", displayOrder: 1, desc: "150 Free Fire Diamonds delivered to game mailbox" },
-  { id: "prod_d2", name: "310 Diamonds", category: "diamonds", originalPrice: 360, discountPrice: 99, bonus: "+31 Bonus", badge: "50% OFF", image: "diamond_icon.png", status: "active", displayOrder: 2, desc: "310 Free Fire Diamonds delivered to game mailbox" },
+  { id: "prod_d1", name: "150 Diamonds", category: "diamonds", originalPrice: 150, discountPrice: 69, bonus: "+15 Bonus", badge: "BEST VALUE", image: "diamond_icon.png", status: "active", displayOrder: 1, desc: "150 Free Fire Diamonds delivered to game mailbox" },
+  { id: "prod_d2", name: "310 Diamonds", category: "diamonds", originalPrice: 360, discountPrice: 150, bonus: "+31 Bonus", badge: "50% OFF", image: "diamond_icon.png", status: "active", displayOrder: 2, desc: "310 Free Fire Diamonds delivered to game mailbox" },
   { id: "prod_d3", name: "520 Diamonds", category: "diamonds", originalPrice: 600, discountPrice: 179, bonus: "+52 Bonus", badge: "50% OFF", image: "diamond_icon.png", status: "active", displayOrder: 3, desc: "520 Free Fire Diamonds delivered to game mailbox" },
   { id: "prod_d4", name: "1060 Diamonds", category: "diamonds", originalPrice: 900, discountPrice: 299, bonus: "+106 Bonus", badge: "50% OFF", image: "diamond_icon.png", status: "active", displayOrder: 4, desc: "1060 Free Fire Diamonds delivered to game mailbox" },
   { id: "prod_d5", name: "2180 Diamonds", category: "diamonds", originalPrice: 1500, discountPrice: 499, bonus: "+218 Bonus", badge: "50% OFF", image: "diamond_icon.png", status: "active", displayOrder: 5, desc: "2180 Free Fire Diamonds delivered to game mailbox" },
